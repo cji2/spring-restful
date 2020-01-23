@@ -38,18 +38,11 @@ public class StudentRestController {
 		return students;
 	}
 	
-		// define end-point for "/students/{stduentId}" - return student at index.
-	/*
-		@GetMapping("/students/{studentId}")
-		public List<Student> getStudent(@PathVariable int studentId) {
-			List<Student> students = new ArrayList<>();
-			
-			// create some sample students.
-			// it will be replaced with database later.
-			students.add(new Student("Abraham", "Lee"));
-			students.add(new Student("David", "Ji"));
-			students.add(new Student("Jacob", "Kim"));
-			
-			return students.get(studentId);
-		} */
+	// define end-point for "/students/{stduentId}" - return student at index.
+	@GetMapping("/students/{studentId}")
+	public Student getStudent(@PathVariable int studentId) {
+		
+		// just index into the list .. keep it simple for a while.
+		return students.get(studentId);
+	} 
 }
