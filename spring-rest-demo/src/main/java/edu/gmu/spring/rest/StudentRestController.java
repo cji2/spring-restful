@@ -72,7 +72,7 @@ public class StudentRestController {
 	// add another exception handler ... to catch any exception (catch all)
 	@ExceptionHandler
 	public ResponseEntity<StudentErrorResponse> handleException(Exception exc) {
-		
+		 
 		// create a StudentErrorResponse.
 		StudentErrorResponse error = new StudentErrorResponse();
 		
